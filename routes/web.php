@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('active', 'HomeController@activeuser');
+Route::post('inactive', 'HomeController@inactiveuser');
+Route::post('add3time', 'HomeController@add3time');
+Route::post('remove3time', 'HomeController@remove3time');

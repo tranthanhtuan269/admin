@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(\Auth::user()->status == 1){
+        if(\Auth::user()->status != 0){
             \Auth::logout();
             return redirect('/login');
         }

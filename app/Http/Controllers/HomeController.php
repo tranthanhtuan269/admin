@@ -65,6 +65,7 @@ class HomeController extends Controller
                     $log = new \App\Log;
                     $log->user = \Auth::user()->id;
                     $log->message = "Add 3 months for user " . $_POST['user_id'];
+                    $log->created_at = date('Y-m-d H:i:s');
                     $log->save();
                     return \Response::json(array('code' => '200', 'message' => 'success'));
                 }
